@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sekcje statku | Chemia morska</title>
+  </head>
+  <body>
+    <div id="app">
+      <main class="ship-section-explorer" aria-label="Interaktywny model statku">
+        <section class="viewer-region">
+          <div class="viewer-toolbar" aria-label="Sterowanie modelem">
+            <button class="icon-button" type="button" data-action="reset" aria-label="Resetuj widok" title="Resetuj widok">
+              <i data-lucide="rotate-ccw"></i>
+            </button>
+            <button class="icon-button" type="button" data-action="toggle-rotate" aria-label="Włącz lub wyłącz obrót" title="Włącz lub wyłącz obrót">
+              <i data-lucide="orbit"></i>
+            </button>
+          </div>
+          <canvas id="shipCanvas" aria-label="Model statku 3D"></canvas>
+          <div class="hover-popup" id="hoverPopup" aria-hidden="true"></div>
+        </section>
+
+        <aside class="section-panel" aria-live="polite">
+          <div class="panel-heading">
+            <span class="eyebrow">Marine chemicals</span>
+            <h1>Dobór chemii do sekcji statku</h1>
+          </div>
+
+          <div class="selected-section" id="selectedSection"></div>
+
+          <nav class="section-tabs" id="sectionTabs" aria-label="Sekcje statku"></nav>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
